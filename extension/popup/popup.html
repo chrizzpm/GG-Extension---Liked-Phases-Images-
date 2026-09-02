@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>网页收藏家</title>
+    <link rel="stylesheet" href="popup.css" />
+  </head>
+  <body>
+    <header class="app-header">
+      <div class="brand">
+        <img src="../icons/icon48.png" alt="" class="brand-logo" width="28" height="28" />
+        <div>
+          <h1>网页收藏家</h1>
+          <p class="brand-sub" id="countLabel">0 条收藏</p>
+        </div>
+      </div>
+      <div class="header-actions">
+        <button class="icon-btn" id="exportBtn" title="导出备份 (JSON)">
+          <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+        </button>
+        <button class="icon-btn" id="importBtn" title="导入备份">
+          <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="17 8 12 3 7 8"/><line x1="12" y1="3" x2="12" y2="15"/></svg>
+        </button>
+        <input type="file" id="importFile" accept="application/json,.json" hidden />
+      </div>
+    </header>
+
+    <div class="search-bar">
+      <svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+      <input type="text" id="searchInput" placeholder="搜索收藏的文字、标题或网址…" />
+    </div>
+
+    <div class="app-body">
+      <aside class="sidebar">
+        <div class="folder-list" id="folderList"></div>
+        <div class="new-folder">
+          <input type="text" id="newFolderInput" maxlength="40" placeholder="新建目录" />
+          <button id="newFolderBtn" title="新建目录">
+            <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></svg>
+          </button>
+        </div>
+      </aside>
+
+      <main class="content">
+        <div class="item-list" id="itemList"></div>
+        <div class="empty" id="emptyState" hidden>
+          <svg viewBox="0 0 24 24" width="42" height="42" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><path d="M19 21l-7-5-7 5V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2z"/></svg>
+          <p class="empty-title">还没有收藏内容</p>
+          <p>在任意网页划选文字，或把鼠标悬停在图片上，<br />点击浮现的收藏按钮即可剪藏。</p>
+        </div>
+      </main>
+    </div>
+
+    <div class="toast" id="toast"></div>
+    <script type="module" src="popup.js"></script>
+  </body>
+</html>

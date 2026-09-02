@@ -3,31 +3,204 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="扣子编程，你的 AI 开发伙伴已就位" />
-    <title>扣子编程 - AI 开发伙伴</title>
-    <link rel="stylesheet" href="/styles/main.css" />
+    <meta name="description" content="网页收藏家 Web Collector —— 划词、点图即可收藏网页文字与图片，按目录分类，数据本地安全存储的 Chrome 扩展。" />
+    <title>网页收藏家 Web Collector · 把网页剪进你的收藏册</title>
+    <link rel="icon" href="/extension/icons/icon128.png" />
+    <link rel="stylesheet" href="styles/landing.css" />
   </head>
   <body>
-    <div id="app">
-      <main class="main-wrapper">
-        <div class="content-container">
-          <img
-            src="https://lf-coze-web-cdn.coze.cn/obj/eden-cn/lm-lgvj/ljhwZthlaukjlkulzlp/coze-coding/icon/coze-coding.gif"
-            alt="扣子编程 Logo"
-            class="logo-image"
-          />
-          <div>
-            <div class="text-container">
-              <h1 class="heading">
-                应用开发中
-              </h1>
-              <p class="description">
-                请稍后，页面即将呈现
-              </p>
-            </div>
-          </div>
+    <!-- ===== 顶部导航 ===== -->
+    <header class="site-header">
+      <div class="container nav">
+        <div class="logo">
+          <img src="/extension/icons/icon48.png" alt="" width="30" height="30" />
+          <span>网页收藏家</span>
         </div>
-      </main>
-    </div>
+        <nav class="nav-links">
+          <a href="#demo">在线体验</a>
+          <a href="#features">功能特性</a>
+          <a href="#install">安装指南</a>
+          <a class="nav-cta" href="/web-collector-extension.zip" download>下载扩展包</a>
+        </nav>
+      </div>
+    </header>
+
+    <!-- ===== Hero ===== -->
+    <section class="hero container">
+      <div class="hero-copy">
+        <p class="eyebrow">CHROME EXTENSION · MANIFEST V3</p>
+        <h1>把网页上的文字与图片，<br />「剪」进你的收藏册。</h1>
+        <p class="hero-desc">
+          划选一段文字、悬停一张图片，点击浮现的收藏按钮，即可把内容夹进分类目录。
+          像整理手账剪报一样整理网络素材——温暖、利落、只属于你。
+        </p>
+        <div class="hero-actions">
+          <a class="btn btn-primary" href="#demo">立即在线体验</a>
+          <a class="btn btn-ghost" href="#install">查看安装指南</a>
+        </div>
+        <ul class="hero-badges">
+          <li>本地存储 · 数据不上传</li>
+          <li>Shadow DOM 样式隔离</li>
+          <li>支持右键菜单与拖拽收藏</li>
+        </ul>
+      </div>
+      <div class="hero-visual">
+        <div class="hero-card hero-card-1">
+          <span class="tape tape-tl"></span><span class="tape tape-br"></span>
+          <img src="/images/demo-1.jpg" alt="手账剪报册" />
+        </div>
+        <div class="hero-card hero-card-2">
+          <div class="mini-badge">＋</div>
+          <p>「旅行门票和杂志段落，都可以夹进来。」</p>
+        </div>
+        <div class="hero-fab" title="收藏夹悬浮球">
+          <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 21l-7-5-7 5V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2z"/></svg>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== 在线演示 ===== -->
+    <section class="demo-section" id="demo">
+      <div class="container">
+        <div class="section-head">
+          <h2>先上手试试</h2>
+          <p>
+            下面是一篇示例文章，<mark>用鼠标划选任意文字</mark>，或把
+            <mark>鼠标悬停在图片上点击右上角的 ＋ 角标</mark>，就能体验完整的收藏流程；
+            也可以把图片<strong>直接拖拽到右下角的墨绿悬浮球</strong>上。收藏后点击悬浮球，在「我的收藏册」里查看。
+          </p>
+        </div>
+
+        <article class="demo-article">
+          <div class="article-meta">
+            <span class="article-tag">示例文章 · DEMO</span>
+            <span>《手账爱好者周刊》第 42 期</span>
+          </div>
+          <h3>把整个互联网，剪成一本属于自己的册子</h3>
+          <p>
+            我们每天浏览大量网页：一段写得极好的文案、一张想用作参考的配图、一个或许以后用得上的教程。
+            浏览器书签只能记下网址，却留不住内容本身——页面改版、链接失效、文章被删，那些曾经打动你的片段就消失了。
+          </p>
+          <p>
+            「网页收藏家」做的事情很简单：<strong>把文字和图片原样剪下来，夹进你命名的目录</strong>。
+            设计灵感、旅行攻略、菜谱、读书笔记，各归其位。所有数据保存在浏览器本地，不上传任何服务器。
+          </p>
+          <figure>
+            <img src="/images/demo-1.jpg" alt="晨光下的手账剪报册" width="800" height="500" />
+            <figcaption>晨光下的剪报册：纸质、克制、有珍藏的手感</figcaption>
+          </figure>
+          <p>
+            它不像冷冰冰的效率工具。米白纸张底色、墨绿主色、朱砂色的角标脉冲——
+            每一次收藏都像把一张便利贴贴进本子。划词时浮现的小按钮、拖拽图片时呼吸的悬浮球，
+            都只在你需要时出现，绝不打扰阅读本身。
+          </p>
+          <figure>
+            <img src="/images/demo-2.jpg" width="800" height="500" alt="收藏的票根与明信片" />
+            <figcaption>票根、明信片、胶带纸：收藏是有温度的整理</figcaption>
+          </figure>
+          <p>
+            点击浏览器工具栏的扩展图标，你会看到完整的收藏管理界面：按目录筛选、全文搜索、
+            一键复制文字、下载图片、删除整理，还支持导出 JSON 备份与导入恢复。试着在上面的段落里划选一句话吧。
+          </p>
+        </article>
+
+        <p class="demo-note">
+          提示：本页演示数据保存在当前浏览器 localStorage 中；安装为正式扩展后，数据保存在扩展独立的 IndexedDB 中。
+        </p>
+      </div>
+    </section>
+
+    <!-- ===== 功能特性 ===== -->
+    <section class="features container" id="features">
+      <div class="section-head">
+        <h2>功能特性</h2>
+        <p>围绕「剪藏」这一件事，做到顺手、可靠、可管理。</p>
+      </div>
+      <div class="feature-grid">
+        <div class="feature-card">
+          <div class="feature-icon">
+            <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"/><path d="M18.5 2.5a2.12 2.12 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"/></svg>
+          </div>
+          <h4>划词即收藏</h3>
+          <p>鼠标划选网页任意文字，选区旁浮现墨绿收藏按钮，点击即可剪藏，自动过滤输入框等编辑区域。</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon">
+            <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg>
+          </div>
+          <h4>图片角标与拖拽</h4>
+          <p>悬停图片出现圆形收藏角标；也可以直接把图片拖到右下角悬浮球投放收藏，抓不到原图时自动降级保留原链接。</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon">
+            <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z"/></svg>
+          </div>
+          <h4>分类目录管理</h4>
+          <p>收藏时选择或新建目录；弹窗中可筛选目录、全文搜索、复制文字、下载图片、重命名/删除目录。</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon">
+            <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
+          </div>
+          <h4>本地安全存储</h4>
+          <p>文字与图片以 Blob 形式存入扩展专属 IndexedDB，数据不离开浏览器；支持 JSON 备份导出与导入恢复。</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon">
+            <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 21l-7-5-7 5V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2z"/></svg>
+          </div>
+          <h4>右键菜单支持</h4>
+          <p>选中文字或在图片上右键，即可从上下文菜单直接发起收藏，习惯哪种操作就用哪种。</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon">
+            <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 2 7 12 12 22 7 12 2"/><polyline points="2 17 12 22 22 17"/><polyline points="2 12 12 17 22 12"/></svg>
+          </div>
+          <h4>Shadow DOM 隔离</h4>
+          <p>所有注入界面运行在封闭 Shadow DOM 中，样式与宿主页面完全隔离，不会被任何网站 CSS 影响或污染页面。</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== 安装指南 ===== -->
+    <section class="install" id="install">
+      <div class="container">
+        <div class="section-head">
+          <h2>安装指南</h2>
+          <p>采用 Manifest V3，无需任何构建步骤，加载即用。</p>
+        </div>
+        <ol class="install-steps">
+          <li>
+            <span class="step-num">1</span>
+            <div><h4>下载扩展包</h4><p>点击右上角「下载扩展包」，得到 <code>web-collector-extension.zip</code>，解压到本地任意目录。</p></div>
+          </li>
+          <li>
+            <span class="step-num">2</span>
+            <div><h4>打开扩展管理页</h4><p>在 Chrome / Edge 地址栏访问 <code>chrome://extensions</code>（Edge 为 <code>edge://extensions</code>）。</p></div>
+          </li>
+          <li>
+            <span class="step-num">3</span>
+            <div><h4>开启开发者模式</h4><p>打开页面右上角的「开发者模式」开关。</p></div>
+          </li>
+          <li>
+            <span class="step-num">4</span>
+            <div><h4>加载已解压的扩展程序</h4><p>点击「加载已解压的扩展程序」，选择解压出的 <code>extension/</code> 目录即可。建议点击工具栏拼图图标把它固定到工具栏。</p></div>
+          </li>
+          <li>
+            <span class="step-num">5</span>
+            <div><h4>开始剪藏</h4><p>打开任意网页：划选文字、悬停图片或右键菜单发起收藏；点击工具栏图标管理你的收藏册。</p></div>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <footer class="site-footer">
+      <div class="container">
+        <p>网页收藏家 Web Collector · 数据完全保存在你的浏览器本地</p>
+      </div>
+    </footer>
+
+    <!-- content script 同一份代码，在普通网页环境自动进入演示模式 -->
+    <script src="/extension/content/content.js"></script>
   </body>
 </html>

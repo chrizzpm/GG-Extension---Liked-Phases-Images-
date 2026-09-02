@@ -8,16 +8,8 @@ appliedPatches = [ ]
 
 [dev]
 build = [ ]
-run = [
-  "sh",
-  "-c",
-  "python -m http.server ${DEPLOY_RUN_PORT} --bind 0.0.0.0"
-]
+run = [ "python server.py" ]
 
 [deploy]
 build = [ ]
-run = [
-  "sh",
-  "-c",
-  "python -m http.server ${DEPLOY_RUN_PORT} --bind 0.0.0.0"
-]
+run = [ "python server.py" ]
